@@ -29,6 +29,7 @@
     "chai": "*"
   },
   "dependencies": {
+    "colors": "*",
     "commander": "*",
     "underscore": "*"
   },
