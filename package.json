@@ -1,0 +1,38 @@
+{
+  "name": "gdeployer",
+  "version": "0.0.0",
+  "description": "Automated deployment tool",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gomboc/gdeployer"
+  },
+  "keywords": [
+    "deploy",
+    "deployment",
+    "automated",
+    "deployer"
+  ],
+  "author": "Drasko Gomboc <drasko.gomboc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gomboc/gdeployer/issues"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  },
+  "dependencies": {
+    "commander": "*",
+    "underscore": "*"
+  },
+  "bin": {
+    "gdeployer": "./bin/gdeployer.js"
+  }
+}
