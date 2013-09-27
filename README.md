@@ -16,6 +16,7 @@ gdeployer
         -V, --version  output the version number
 
 eg
+
     $ gdeployer /repo/path
 
 ## Config
