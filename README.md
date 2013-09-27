@@ -15,7 +15,12 @@ gdeployer
         -h, --help     output usage information
         -V, --version  output the version number
 
+eg
+    $ gdeployer /repo/path
+
 ## Config
+
+Create gdeployer.json config file and put to repository root directory
 
 Config file options
 
