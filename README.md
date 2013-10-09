@@ -29,6 +29,18 @@ Config file options
       "destinationPath": "deployment/path",
       "version":  "0.0.0"
     }
+    {
+    "version": "0.0.0",
+    "destinationPath": "deployment/path",
+    "tasks": {
+        "before": [
+            "some task command",
+        ],
+        "after": [
+            "some task command"
+        ]
+    }
+}
 
 ## License
 
