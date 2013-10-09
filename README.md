@@ -26,10 +26,6 @@ Create gdeployer.json config file and put to repository root directory
 Config file options
 
     {
-      "destinationPath": "deployment/path",
-      "version":  "0.0.0"
-    }
-    {
     "version": "0.0.0",
     "destinationPath": "deployment/path",
     "tasks": {
