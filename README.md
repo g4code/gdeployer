@@ -26,17 +26,17 @@ Create gdeployer.json config file and put to repository root directory
 Config file options
 
     {
-    "version": "0.0.0",
-    "destinationPath": "deployment/path",
-    "tasks": {
+      "version": "0.0.0",
+      "destinationPath": "deployment/path",
+      "tasks": {
         "before": [
-            "some task command",
+          "some task command"
         ],
         "after": [
-            "some task command"
+          "some task command"
         ]
+      }
     }
-}
 
 ## License
 
