@@ -1,6 +1,6 @@
 {
   "name": "gdeployer",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Automated deployment tool",
   "main": "index.js",
   "directories": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/gomboc/gdeployer"
+    "url": "git://github.com/g4code/gdeployer"
   },
   "keywords": [
     "deploy",
@@ -22,7 +22,7 @@
   "author": "Drasko Gomboc <drasko.gomboc@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gomboc/gdeployer/issues"
+    "url": "https://github.com/g4code/gdeployer/issues"
   },
   "devDependencies": {
     "mocha": "*",
