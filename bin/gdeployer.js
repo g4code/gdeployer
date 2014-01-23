@@ -10,7 +10,7 @@ packageData = require(__dirname + "/../package.json");
 
 program.version(packageData.version)
    .usage("[options] [dir]")
-   .option('-c, --config <n>', 'config file path (relative to repository path)')
+   .option('-c, --config <n>', 'config file path, relative to repository path (default gdeployer.json)')
    .option('-r, --repository <n>', 'repository name (default origin)')
    .option('-b, --branch <n>', 'branch name (default master)')
    .parse(process.argv);

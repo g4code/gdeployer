@@ -12,8 +12,13 @@ gdeployer
     Usage: gdeployer [options] [dir]
 
     Options:
-        -h, --help     output usage information
-        -V, --version  output the version number
+        -h, --help            output usage information
+        -V, --version         output the version number
+        -c, --config <n>      config file path, relative to repository path (default gdeployer.json)
+        -r, --repository <n>  repository name (default origin)
+        -b, --branch <n>      branch name (default master)
+
+
 
 eg
 
