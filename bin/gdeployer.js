@@ -11,9 +11,13 @@ packageData = require(__dirname + "/../package.json");
 program.version(packageData.version)
    .usage("[options] [dir]")
    .option('-c, --config <n>', 'config file path (relative to repository path)')
+   .option('-r, --repository <n>', 'repository name (default origin)')
+   .option('-b, --branch <n>', 'branch name (default master)')
    .parse(process.argv);
 
 var app = new App();
 app.setArgs(program.args)
    .setConfigRelativePath(program.config)
+   .setRepositoryName(program.repository)
+   .setBranchName(program.branch)
    .init();
