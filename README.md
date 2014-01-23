@@ -23,6 +23,8 @@ gdeployer
 eg
 
     $ gdeployer /repo/path
+    $ gdeployer --config configs/production.json /repo/path
+    $ gdeployer --config configs/production.json --repository origin --branch master /repo/path
 
 ## Config
 
