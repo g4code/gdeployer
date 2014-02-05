@@ -16,8 +16,8 @@ program.version(packageData.version)
    .parse(process.argv);
 
 var app = new App();
-app.setArgs(program.args)
-   .setConfigRelativePath(program.config)
-   .setRepositoryName(program.repository)
-   .setBranchName(program.branch)
-   .init();
+app.args               = program.args;
+app.configRelativePath = program.config;
+app.repositoryName     = program.repository;
+app.branchName         = program.branch;
+app.init();
