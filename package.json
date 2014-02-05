@@ -32,7 +32,9 @@
     "colors": "*",
     "commander": "*",
     "evento": "*",
-    "underscore": "*"
+    "informer": "*",
+    "underscore": "*",
+    "moment": "*"
   },
   "bin": {
     "gdeployer": "./bin/gdeployer.js"

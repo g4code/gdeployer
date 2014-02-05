@@ -4,9 +4,9 @@
  * Module dependencies.
  */
 
-var App     = require("../lib/app"),
-program     = require("commander"),
-packageData = require(__dirname + "/../package.json");
+var Gdeployer = require("../lib/gdeployer"),
+program       = require("commander"),
+packageData   = require(__dirname + "/../package.json");
 
 program.version(packageData.version)
    .usage("[options] [dir]")
@@ -15,9 +15,9 @@ program.version(packageData.version)
    .option('-b, --branch <n>', 'branch name (default master)')
    .parse(process.argv);
 
-var app = new App();
-app.args               = program.args;
-app.configRelativePath = program.config;
-app.repositoryName     = program.repository;
-app.branchName         = program.branch;
-app.init();
+var gdeployer = new Gdeployer();
+gdeployer.request.args                 = program.args;
+gdeployer.request.configPath           = program.config;
+gdeployer.request.remoteRepositoryName = program.repository;
+gdeployer.request.branchName           = program.branch;
+gdeployer.run();
