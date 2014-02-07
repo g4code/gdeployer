@@ -9,7 +9,7 @@ commander.version(packageData.version)
    .option('-c, --config <n>',     'config file path, relative to repository path (default gdeployer.json)')
    .option('-r, --repository <n>', 'repository name (default origin)')
    .option('-b, --branch <n>',     'branch name (default master)')
-   .option('-l, --latest <n>',     'latest code (branch || tag) (default branch)')
+   .option('-f, --from <n>',       'code from (branch || tag) (default branch)')
    .option('-t, --tag <n>',        'tag name')
    .parse(process.argv);
 
@@ -18,6 +18,6 @@ gdeployer.request.args                 = commander.args;
 gdeployer.request.configPath           = commander.config;
 gdeployer.request.remoteRepositoryName = commander.repository;
 gdeployer.request.branchName           = commander.branch;
-gdeployer.request.latest               = commander.latest;
+gdeployer.request.from                 = commander.from;
 gdeployer.request.tag                  = commander.tag;
 gdeployer.run();
