@@ -9,8 +9,8 @@ commander.version(packageData.version)
    .option('-c, --config <n>',     'config file path, relative to repository path (default gdeployer.json)')
    .option('-r, --repository <n>', 'repository name (default origin)')
    .option('-b, --branch <n>',     'branch name (default master)')
-   .option('-f, --from <n>',       'code from (branch || tag) (default branch)')
-   .option('-t, --tag <n>',        'tag name')
+   .option('-f, --from <n>',       'deploy version from (branch || tag) (default branch)')
+   .option('-t, --tag <n>',        'deploy version from tag name')
    .parse(process.argv);
 
 var gdeployer = new Gdeployer();
