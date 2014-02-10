@@ -1,6 +1,6 @@
 {
   "name": "gdeployer",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Automated deployment tool",
   "main": "index.js",
   "directories": {
