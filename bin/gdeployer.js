@@ -11,6 +11,7 @@ commander.version(packageData.version)
    .option('-b, --branch <n>',     'branch name (default master)')
    .option('-f, --from <n>',       'deploy version from (branch || tag) (default branch)')
    .option('-t, --tag <n>',        'deploy version from tag name')
+   .option('-e, --export <n>',     'path where to export version json')
    .parse(process.argv);
 
 var gdeployer = new Gdeployer();
@@ -20,4 +21,5 @@ gdeployer.request.remoteRepositoryName = commander.repository;
 gdeployer.request.branchName           = commander.branch;
 gdeployer.request.from                 = commander.from;
 gdeployer.request.tag                  = commander.tag;
+gdeployer.request.exportVersion        = commander["export"]
 gdeployer.run();
