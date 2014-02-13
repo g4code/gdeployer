@@ -20,6 +20,7 @@ Options:
     -b, --branch <n>      branch name (default master)
     -f, --from <n>        deploy version from (branch || tag) (default branch)
     -t, --tag <n>         deploy version from tag name
+    -e, --export <n>      reletive path from deploy path, where to export version file
 ```
 eg
 ```bash
@@ -34,6 +35,9 @@ $ gdeployer --config configs/production.json --from tag /repo/path
     
 # deploy code from specific tag
 $ gdeployer --config configs/production.json --tag 0.5.0 /repo/path
+
+# export version name and timestamp to a file
+$ gdeployer --config configs/production.json --export ./public /repo/path
 ```
 
 ## Config
