@@ -17,7 +17,7 @@ git-version:
 	@echo "git: commit, tag, push" \
 	&& git add . \
 	&& git commit -m "version $(version)" \
-	&& git tag -a v$(version) -m "version $(version)" \
+	&& git tag -a $(version) -m "version $(version)" \
 	&& git push origin master \
 	&& git push --tags
 
