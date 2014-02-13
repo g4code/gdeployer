@@ -3,21 +3,15 @@ MOCHA_PATH = ./node_modules/.bin/mocha
 install:
 	@npm install
 
-pack:
-	@npm pack
+change-version: check-version
+	@echo "version in package" \
+	&& sed -i "s/\"version\": *\".*\"/\"version\":\"$(version)\"/g" package.json \
 
-release: version-check change-version git-version
-	@echo "release $(version) completed"
-
-version-check:
+check-version:
 	@if test "$(version)" = ""; then \
 		echo "Version variable is not set"; \
 		exit 1; \
 	fi
-
-change-version:
-	@echo "version in package" \
-	&& sed -i "s/\"version\": *\".*\"/\"version\":\"$(version)\"/g" package.json \
 
 git-version:
 	@echo "git: commit, tag, push" \
@@ -26,6 +20,12 @@ git-version:
 	&& git tag -a v$(version) -m "version $(version)" \
 	&& git push origin master \
 	&& git push --tags
+
+pack:
+	@npm pack
+
+release: change-version git-version
+	@echo "release $(version) completed"
 
 test:
 	@NODE_ENV=test $(MOCHA_PATH) \
@@ -45,4 +45,5 @@ test-w:
 		--watch
 
 .PHONY: install pack release
+.PHONY: check-version change-version git-version
 .PHONY: test test-spec test-w
