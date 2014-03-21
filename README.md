@@ -3,6 +3,9 @@ gdeployer
 
 > Automated deployment tool - [nodejs](http://nodejs.org) library
 
+
+[![NPM](https://nodei.co/npm/gdeployer.png)](https://nodei.co/npm/gdeployer/)
+
 ## Install
 ```bash
 $ npm install -g gdeployer
