@@ -51,6 +51,7 @@ Config file options:
 ```js
 {
   "destinationPath": "deployment/path",
+  "versionsToKeep": 2,
   "tasks": {
     "before": [
       "echo before live task"
