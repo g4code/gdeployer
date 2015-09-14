@@ -34,7 +34,8 @@
     "evento": "*",
     "informer": "*",
     "underscore": "*",
-    "moment": "*"
+    "moment": "*",
+    "fs-extra": "0.24.0"
   },
   "bin": {
     "gdeployer": "./bin/gdeployer.js"
