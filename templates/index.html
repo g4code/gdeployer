@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>gdeployer</title>
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap/dist/css/bootstrap.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>gdeployer</h1>
+            {% for app in apps %}
+                <div class="well">
+                    {{ app }}
+                    <a href="javascript:void(0);" class="btn btn-success js-deploy" data-name="{{ app.name }}">Deploy</a>
+                    <a href="javascript:void(0);" class="btn btn-info">Last log</a>
+                </div>
+            {% endfor %}
+        </div>
+        <script type="text/javascript" src="/js/engine.io-client/engine.io.js"></script>
+        <script type="text/javascript">
+            var socket = eio('ws://localhost:8000/');
+            socket.on('open', function(){
+                socket.on('message', function(data){
+                    console.log(data);
+                });
+                socket.on('close', function(){
+                    console.log('connection closed');
+                });
+            });
+            function send(event) {
+                socket.send(JSON.stringify({action: 'deploy', name: event.originalTarget.dataset.name}));
+            }
+            var actionElements = document.getElementsByClassName("js-deploy");
+            for (var i = 0; i < actionElements.length; i++) {
+                actionElements[i].addEventListener('click', send, false);
+            }
+        </script>
+    </body>
+</html>
