@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>gdeployer</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" />
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>gdeployer</h1>
+            {% for oneMessage in messages %}
+                <div class="text-white px-2 py-1 my-2
+                    {% if oneMessage.type == 'ERROR' %} bg-danger {% endif %}
+                    {% if oneMessage.type == 'SUCCESS' %} bg-success {% endif %}
+                    {% if oneMessage.type == 'INFO' %} bg-info {% endif %}
+                    {% if oneMessage.type == 'WARNING' %} bg-warning {% endif %}
+                    {% if oneMessage.type == 'LOADING' %} bg-inverse {% endif %}
+                    ">
+                    {{ oneMessage.type }}:
+                    {{ oneMessage.text }}
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
