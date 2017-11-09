@@ -18,7 +18,15 @@
                     {% if oneMessage.type == 'LOADING' %} bg-inverse {% endif %}
                     ">
                     {{ oneMessage.type }}:
-                    {{ oneMessage.text }}
+                    {% if oneMessage.multipleLines == true %}
+                        {% for oneLine in oneMessage.text %}
+                            <p class="my-0">
+                                {{ oneLine }}
+                            </p>
+                        {% endfor %}
+                    {% else %}
+                        {{ oneMessage.text[0] }}
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
