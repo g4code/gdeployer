@@ -9,6 +9,24 @@
     <body>
         <div class="container">
             <h1>gdeployer</h1>
+
+            <table class="table table-inverse my-5">
+                <tbody>
+                    <tr>
+                        <td>Project</td>
+                        <td>{{ repoName }}</td>
+                    </tr>
+                    <tr>
+                        <td>Version</td>
+                        <td>{{ version }}</td>
+                    </tr>
+                    <tr>
+                        <td>Time</td>
+                        <td>{{ datetime }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
             {% for oneMessage in messages %}
                 <div class="text-white px-2 py-1 my-2
                     {% if oneMessage.type == 'ERROR' %} bg-danger {% endif %}
