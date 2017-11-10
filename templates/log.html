@@ -14,15 +14,22 @@
                 <tbody>
                     <tr>
                         <td>Project</td>
-                        <td>{{ repoName }}</td>
+                        <td colspan="3">{{ repoName }}</td>
                     </tr>
                     <tr>
                         <td>Version</td>
-                        <td>{{ version }}</td>
+                        <td colspan="3">{{ version }}</td>
                     </tr>
                     <tr>
                         <td>Time</td>
-                        <td>{{ datetime }}</td>
+                        <td colspan="3">{{ datetime }}</td>
+                    </tr>
+                    <tr>
+                        <td>Summary</td>
+                        <td class="bg-danger">{{ summary.error }}</td>
+                        <td class="bg-warning">{{ summary.warning }}</td>
+                        <td class="bg-success">{{ summary.success }}</td>
+                        </td>
                     </tr>
                 </tbody>
             </table>
