@@ -21,11 +21,15 @@
                         <td colspan="3">{{ version }}</td>
                     </tr>
                     <tr>
-                        <td>Time</td>
+                        <td>Deployed at</td>
                         <td colspan="3">{{ datetime }}</td>
                     </tr>
                     <tr>
-                        <td>Summary</td>
+                        <td>Total execution time</td>
+                        <td colspan="3">{{ executionTime }}</td>
+                    </tr>
+                    <tr>
+                        <td>Tasks summary</td>
                         <td class="bg-danger">{{ summary.error }}</td>
                         <td class="bg-warning">{{ summary.warning }}</td>
                         <td class="bg-success">{{ summary.success }}</td>
